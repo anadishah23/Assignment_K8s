@@ -1,0 +1,30 @@
+package com.nagarro.nagp.microservice.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nagarro.nagp.microservice.order.model.OrderModel;
+
+@RestController
+public class OrderServiceController {
+	
+	
+	@GetMapping("/order/{orderId}")
+	public String getOrderDetail(@PathVariable("orderId") int orderId)
+	{
+		return "sdhfkasdhjf";
+	}
+	/*
+	 * @GetMapping("/order/user/{userId}") public List<OrderModel>
+	 * getOrderDetail(@PathVariable("userId") String userId) { return
+	 * orderService.getOrderDetailByUserId(userId); }
+	 * 
+	 * 
+	 * @GetMapping("/allorder") public List<OrderModel> getAllOrderDetail() { return
+	 * orderService.getAllOrderDetail(); }
+	 */
+
+}

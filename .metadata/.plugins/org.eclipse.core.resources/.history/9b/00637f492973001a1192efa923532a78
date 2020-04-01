@@ -1,0 +1,7 @@
+package com.nagarro.nagp.microservice.order.service.impl;
+
+import com.nagarro.nagp.microservice.order.services.OrderService;
+
+public class DefaultOrderService implements OrderService{
+
+}

@@ -1,0 +1,31 @@
+package com.nagarro.nagp.microservice.order.model;
+
+public class OrderModel {
+	
+	private int orderId;
+	
+	private double orderAmount;
+	
+	private String orderDate;
+
+	public int getOrderId() {
+		return orderId;
+	}
+
+	public double getOrderAmount() {
+		return orderAmount;
+	}
+
+	public String getOrderDate() {
+		return orderDate;
+	}
+
+	public OrderModel(int orderId, double orderAmount, String orderDate) {
+		super();
+		this.orderId = orderId;
+		this.orderAmount = orderAmount;
+		this.orderDate = orderDate;
+	}
+	
+
+}

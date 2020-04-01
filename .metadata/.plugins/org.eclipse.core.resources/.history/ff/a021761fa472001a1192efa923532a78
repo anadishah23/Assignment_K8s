@@ -1,0 +1,5 @@
+package com.nagarro.nagp.microservice.user.dao;
+
+public interface UserDetailDao {
+
+}

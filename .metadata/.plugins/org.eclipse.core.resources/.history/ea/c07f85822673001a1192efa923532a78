@@ -1,0 +1,36 @@
+package com.nagarro.nagp.microservice.order.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.nagarro.nagp.microservice.order.daos.OrderServiceDao;
+import com.nagarro.nagp.microservice.order.model.OrderModel;
+import com.nagarro.nagp.microservice.order.service.OrderService;
+
+@Service
+public class DefaultOrderServiceImpl implements OrderService{
+	
+	@Resource
+	private OrderServiceDao OrderServiceDao;
+	
+	@Override
+	public OrderModel getOrderDetail(int orderId)
+	{
+		return OrderServiceDao.getOrderDetail(orderId);
+	}
+	
+	@Override
+	public List<OrderModel> getOrderDetailByUserId(String userId)
+	{
+		return OrderServiceDao.getOrderDetailByUserId(userId);
+	}
+	
+	@Override
+	public List<OrderModel> getAllOrderDetail()
+	{
+		return OrderServiceDao.getAllOrderDetail();
+	}
+}

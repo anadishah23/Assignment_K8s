@@ -1,0 +1,20 @@
+package com.nagarro.nagp.microservice.aggregate;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+
+import com.nagarro.nagp.microservice.order.OrderApplication;
+
+
+@SpringBootApplication(scanBasePackages = {"com.nagarro.nagp.microservice.controller"})
+@EnableEurekaClient
+public class AggregateSericeApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SpringApplication.run(OrderApplication.class, args);
+
+	}
+
+}

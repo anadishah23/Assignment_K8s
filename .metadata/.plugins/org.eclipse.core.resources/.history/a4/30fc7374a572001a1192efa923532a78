@@ -1,0 +1,5 @@
+package com.nagarro.nagp.microservice.user.services;
+
+public interface DefaultUserService {
+
+}

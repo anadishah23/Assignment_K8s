@@ -1,0 +1,36 @@
+package com.nagarro.nagp.microservice.user.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.anadi.shah.nagp.user.model.UserModel;
+
+@Component
+public class UserDetailDaoImpl {
+
+	List<UserModel> userList = new ArrayList<UserModel>();
+
+	public void createData() {
+		UserModel user1 = new UserModel(1, "john", 32, "john@gmail.com", "8735654222");
+		UserModel user2 = new UserModel(2, "henry", 26, "henry22@gmail.com", "9488647645");
+		UserModel user3 = new UserModel(3, "mark", 29, "mark8@gmail.com", "9589734561");
+		userList.add(user1);
+		userList.add(user2);
+		userList.add(user3);
+	}
+
+	public UserModel getUserDetail(int id) {
+		createData();
+		return userList.get(id-1);
+
+	}
+	
+	public List<UserModel> getAllUserDetail()
+	{
+		createData();
+		return userList;
+	}
+
+}

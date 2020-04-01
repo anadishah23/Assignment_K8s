@@ -1,0 +1,33 @@
+package com.nagarro.nagp.microservice.order.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.nagarro.microservice.order.service.OrderService;
+import com.nagarro.nagp.microservice.order.daos.OrderServiceDao;
+import com.nagarro.nagp.microservice.order.model.OrderModel;
+
+@Component
+public class DefaultOrderServiceImpl implements OrderService{
+	
+	@Autowired
+	private OrderServiceDao OrderServiceDao;
+	
+	public OrderModel getOrderDetail(int orderId)
+	{
+		return OrderServiceDao.getOrderDetail(orderId);
+	}
+	
+	public List<OrderModel> getOrderDetailByUserId(String userId)
+	{
+		return OrderServiceDao.getOrderDetailByUserId(userId);
+	}
+	
+	
+	public List<OrderModel> getAllOrderDetail()
+	{
+		return OrderServiceDao.getAllOrderDetail();
+	}
+}

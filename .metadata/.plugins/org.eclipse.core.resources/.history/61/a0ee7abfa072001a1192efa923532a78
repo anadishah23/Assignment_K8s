@@ -1,0 +1,27 @@
+package com.nagarro.nagp.microservice.user.service.Impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.anadi.shah.nagp.user.dao.UserDetailDaoImpl;
+import com.anadi.shah.nagp.user.model.UserModel;
+
+@Service
+public class UserServiceImpl {
+	
+	@Autowired
+	private UserDetailDaoImpl userDetailDaoImpl;
+	
+	public UserModel getUserDetail(int id)
+	{
+		return userDetailDaoImpl.getUserDetail(id);
+	}
+	
+	public List<UserModel> getAllUserDetail()
+	{
+		return userDetailDaoImpl.getAllUserDetail();
+	}
+
+}

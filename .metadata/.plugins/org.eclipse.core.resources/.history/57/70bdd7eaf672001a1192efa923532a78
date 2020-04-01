@@ -1,0 +1,5 @@
+package com.nagarro.nagp.microservice.aggregate.service;
+
+public interface AggregateService {
+
+}

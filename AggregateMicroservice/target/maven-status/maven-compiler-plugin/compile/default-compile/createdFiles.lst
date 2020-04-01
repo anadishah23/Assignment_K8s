@@ -1,0 +1,8 @@
+com\nagarro\nagp\microservice\aggregate\controller\AggregateController.class
+com\nagarro\nagp\microservice\aggregate\model\OrderListModel.class
+com\nagarro\nagp\microservice\aggregate\model\OrderModel.class
+com\nagarro\nagp\microservice\aggregate\AggregateServiceApplication.class
+com\nagarro\nagp\microservice\aggregate\service\AggregateService.class
+com\nagarro\nagp\microservice\aggregate\model\UserModel.class
+com\nagarro\nagp\microservice\aggregate\service\impl\DefaultAggregateServiceImpl.class
+com\nagarro\nagp\microservice\aggregate\model\AggregateModel.class

@@ -1,0 +1,11 @@
+package com.nagarro.nagp.microservice.aggregate.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value = "/Aggregate")
+public class AggregateController {
+
+	
+	
+}

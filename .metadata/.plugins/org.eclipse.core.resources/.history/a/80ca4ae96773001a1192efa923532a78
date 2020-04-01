@@ -1,0 +1,8 @@
+package com.nagarro.nagp.microservice.aggregate.model;
+
+public class OrderListModel {
+
+	private List<OrderModel> orderList;
+	
+	
+}

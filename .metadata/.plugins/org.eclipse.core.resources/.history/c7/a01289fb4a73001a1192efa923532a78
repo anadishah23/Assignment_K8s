@@ -1,0 +1,15 @@
+package com.nagarro.nagp.microservice.order;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+/* @EnableEurekaClient */
+@ComponentScan(basePackages= {"com.nagarro.nagp.microservice.controller"}
+public class OrderApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OrderApplication.class, args);
+	}
+
+}

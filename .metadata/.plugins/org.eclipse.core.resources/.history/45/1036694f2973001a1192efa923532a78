@@ -1,0 +1,28 @@
+package com.nagarro.nagp.microservice.order.service.impl;
+
+import java.util.List;
+
+import com.nagarro.nagp.microservice.order.model.OrderModel;
+import com.nagarro.nagp.microservice.order.services.OrderService;
+
+public class DefaultOrderService implements OrderService{
+
+	@Override
+	public OrderModel getOrderDetail(int orderId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OrderModel> getOrderDetailByUserId(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<OrderModel> getAllOrderDetail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

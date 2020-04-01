@@ -1,0 +1,15 @@
+package com.nagarro.microservice.order.serice;
+
+import java.util.List;
+
+import com.nagarro.nagp.microservice.order.model.OrderModel;
+
+public interface OrderService {
+
+	public OrderModel getOrderDetail(int orderId);
+	
+	public OrderModel getOrderDetailByUserId(String userId)
+	
+	public List<OrderModel> getAllOrderDetail();
+	
+}

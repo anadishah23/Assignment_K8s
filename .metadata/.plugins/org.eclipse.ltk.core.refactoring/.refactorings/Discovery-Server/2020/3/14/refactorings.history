@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.anadi.shah.nagp.eurka&apos; to &apos;com.nagarro.nagp.microservice.eurka&apos;&#x0D;&#x0A;- Original project: &apos;Discovery-Server&apos;&#x0D;&#x0A;- Original element: &apos;Discovery-Server/src/main/java/com.anadi.shah.nagp.eurka&apos;&#x0D;&#x0A;- Renamed element: &apos;Discovery-Server/src/main/java/com.nagarro.nagp.microservice.eurka&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.anadi.shah.nagp.eurka&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.anadi.shah.nagp.eurka" name="com.nagarro.nagp.microservice.eurka" qualified="false" references="true" stamp="1585587958708" textual="false" version="1.0"/>
+</session>

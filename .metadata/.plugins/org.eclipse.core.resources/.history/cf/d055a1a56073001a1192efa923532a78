@@ -1,0 +1,5 @@
+spring.application.name=aggregate
+server.port=8099
+
+
+user.url=${UserURL:http://localhost:8090}

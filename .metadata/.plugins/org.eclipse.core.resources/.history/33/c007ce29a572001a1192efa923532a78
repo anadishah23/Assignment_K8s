@@ -1,0 +1,39 @@
+package com.nagarro.nagp.microservice.order.dao.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.nagarro.nagp.microservice.order.model.OrderModel;
+
+@Component
+public class DefaultOrderServiceDaoImpl {
+	
+	List<OrderModel> orderList = new ArrayList<OrderModel>();
+	
+	public void createData()
+	{
+		OrderModel order1 = new OrderModel(1,250,"1-Mar-2020");
+		OrderModel order2 = new OrderModel(2,400,"15-Mar-2020");
+		OrderModel order3 = new OrderModel(3,315,"17-Mar-2020");
+		OrderModel order4 = new OrderModel(4,353,"19-Mar-2020");
+		orderList.add(order1);
+		orderList.add(order2);
+		orderList.add(order3);
+		orderList.add(order4);
+	}
+	
+	public OrderModel getOrderDetail(int orderId)
+	{
+		createData();
+		return orderList.get(orderId-1);
+	}
+	
+	public List<OrderModel> getAllOrderDetail()
+	{
+		createData();
+		return orderList;
+	}
+
+}
