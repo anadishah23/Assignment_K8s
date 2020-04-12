@@ -1,5 +1,8 @@
 package com.nagarro.nagp.microservice.aggregate.controller;
 
+import java.util.Arrays;
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.slf4j.Logger;
@@ -11,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.nagarro.nagp.microservice.aggregate.model.AggregateModel;
+import com.nagarro.nagp.microservice.aggregate.model.OrderModel;
+import com.nagarro.nagp.microservice.aggregate.model.UserModel;
 import com.nagarro.nagp.microservice.aggregate.service.AggregateService;
 
 @RestController
@@ -26,15 +31,27 @@ private static final Logger LOG = LoggerFactory.getLogger(AggregateController.cl
 	private AggregateService aggregateService;
 	
 	@GetMapping(value = "/{userId}")
-	public AggregateModel getOderDetailsForUser(@PathVariable(name = "userId") String userId) {
+	public AggregateModel getOrderDetailsForUser(@PathVariable(name = "userId") String userId) {
 		
-		return aggregateService.getOrderDetailsForUser(userId);
+		 LOG.info("Inside Aggregator application in getOrderDetailsForUser()");
+		 AggregateModel aggregate = new AggregateModel();
+		 
+		 UserModel user = aggregateService.getUserDetailsForAggregator(userId);
+		 LOG.info("Saving userModel with userId" + user + " in aggregatorService");
+		 
+		 aggregate.setUser(user);
+		 
+		 OrderModel[] orders = aggregateService.getOrderDetailsForAggregator(userId);
+		 LOG.info("Saving orderListModel with orders" + orders + " in aggregatorService");
+		 List<OrderModel> orderList = Arrays.asList(orders);
+		 aggregate.setOrders(orderList);
+		 return aggregate;
 	}
 	
 	@GetMapping(value = "/test")
 	public String testapi() {
 		
-		return "sadfsdfsdfdsfasd";
+		return "Successfully returning data";
 	}
 	
 	

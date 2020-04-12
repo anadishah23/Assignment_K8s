@@ -6,7 +6,7 @@ public class AggregateModel {
 
 	UserModel user;
 	
-	OrderListModel orders;
+	List<OrderModel> orders;
 
 	public AggregateModel() {
 		
@@ -20,11 +20,11 @@ public class AggregateModel {
 		this.user = user;
 	}
 
-	public OrderListModel getOrders() {
+	public List<OrderModel> getOrders() {
 		return orders;
 	}
 
-	public void setOrders(OrderListModel orders) {
+	public void setOrders(List<OrderModel> orders) {
 		this.orders = orders;
 	}
 	

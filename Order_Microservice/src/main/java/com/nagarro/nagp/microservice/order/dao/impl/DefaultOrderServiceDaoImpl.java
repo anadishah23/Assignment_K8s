@@ -19,6 +19,7 @@ public class DefaultOrderServiceDaoImpl implements OrderServiceDao {
 	{
 		OrderModel order1 = new OrderModel(1,250,"1-Mar-2020","1");
 		OrderModel order2 = new OrderModel(2,400,"15-Mar-2020","1");
+		OrderModel order7 = new OrderModel(9,250,"1-Mar-2020","1");
 		OrderModel order3 = new OrderModel(3,315,"17-Mar-2020","2");
 		OrderModel order4 = new OrderModel(4,353,"19-Mar-2020","2");
 		OrderModel order5 = new OrderModel(5,515,"27-Mar-2020","3");
@@ -29,6 +30,7 @@ public class DefaultOrderServiceDaoImpl implements OrderServiceDao {
 		orderList.add(order4);
 		orderList.add(order5);
 		orderList.add(order6);
+		orderList.add(order7);
 	}
 	
 	DefaultOrderServiceDaoImpl(){

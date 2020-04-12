@@ -1,9 +1,12 @@
 package com.nagarro.nagp.microservice.aggregate.service;
 
-import com.nagarro.nagp.microservice.aggregate.model.AggregateModel;
+import com.nagarro.nagp.microservice.aggregate.model.OrderModel;
+import com.nagarro.nagp.microservice.aggregate.model.UserModel;
 
 public interface AggregateService {
 
-	public AggregateModel getOrderDetailsForUser(String userId);
+	public UserModel getUserDetailsForAggregator(String userId);
+	
+	public OrderModel[] getOrderDetailsForAggregator(String userId);
 	
 }
